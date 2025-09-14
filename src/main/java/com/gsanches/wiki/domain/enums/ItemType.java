@@ -1,4 +1,4 @@
-package com.gsanches.wiki.domain;
+package com.gsanches.wiki.domain.enums;
 
 public enum ItemType {
     ETC,

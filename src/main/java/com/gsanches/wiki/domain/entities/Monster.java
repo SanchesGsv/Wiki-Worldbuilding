@@ -1,9 +1,9 @@
 package com.gsanches.wiki.domain.entities;
 
 
-import com.gsanches.wiki.domain.Element;
-import com.gsanches.wiki.domain.MonsterType;
-import com.gsanches.wiki.domain.Size;
+import com.gsanches.wiki.domain.enums.Element;
+import com.gsanches.wiki.domain.enums.MonsterType;
+import com.gsanches.wiki.domain.enums.Size;
 import jakarta.persistence.*;
 import lombok.*;
 

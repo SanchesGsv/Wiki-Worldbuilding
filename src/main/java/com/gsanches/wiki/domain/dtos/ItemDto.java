@@ -1,6 +1,6 @@
 package com.gsanches.wiki.domain.dtos;
 
-import com.gsanches.wiki.domain.ItemType;
+import com.gsanches.wiki.domain.enums.ItemType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

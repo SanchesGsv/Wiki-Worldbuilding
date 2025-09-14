@@ -1,8 +1,8 @@
 package com.gsanches.wiki.domain.dtos;
 
-import com.gsanches.wiki.domain.Element;
-import com.gsanches.wiki.domain.MonsterType;
-import com.gsanches.wiki.domain.Size;
+import com.gsanches.wiki.domain.enums.Element;
+import com.gsanches.wiki.domain.enums.MonsterType;
+import com.gsanches.wiki.domain.enums.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,6 +1,6 @@
 package com.gsanches.wiki.domain.entities;
 
-import com.gsanches.wiki.domain.SkillType;
+import com.gsanches.wiki.domain.enums.SkillType;
 import jakarta.persistence.*;
 import lombok.*;
 
