@@ -2,16 +2,21 @@ package com.gsanches.wiki.services.impl;
 
 import com.gsanches.wiki.domain.dtos.MonsterDto;
 import com.gsanches.wiki.domain.entities.Monster;
+import com.gsanches.wiki.domain.enums.Element;
 import com.gsanches.wiki.repositories.MonsterRepository;
 import com.gsanches.wiki.services.MonsterService;
-import lombok.Builder;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.UUID;
+
 @Service
 @RequiredArgsConstructor
 public class MonsterServiceImpl implements MonsterService {
+
 
     private final MonsterRepository monsterRepository;
 
@@ -25,4 +30,7 @@ public class MonsterServiceImpl implements MonsterService {
         return monsterRepository.save(newMonster);
 
     }
+
+
+
 }

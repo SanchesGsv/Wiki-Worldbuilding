@@ -43,4 +43,7 @@ public class Monster {
     //basic attributes
 
 
+//    private List<>
+
+
 }

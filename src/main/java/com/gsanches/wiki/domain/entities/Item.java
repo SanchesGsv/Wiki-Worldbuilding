@@ -4,6 +4,7 @@ import com.gsanches.wiki.domain.enums.ItemType;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -25,5 +26,7 @@ public class Item {
 
     private Integer sellPrice;
     private Integer buyPrice;
+
+//    private List<Monster> monsters
 
 }
