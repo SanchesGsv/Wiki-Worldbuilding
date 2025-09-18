@@ -4,6 +4,7 @@ import com.gsanches.wiki.domain.enums.ItemType;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,6 +28,8 @@ public class Item {
     private Integer sellPrice;
     private Integer buyPrice;
 
-//    private List<Monster> monsters
+    // TODO: Continue the many to many
+//    @ManyToMany(mappedBy = drops_id_and_chances)
+    private HashMap<UUID, Float> dropIdAndChances = new HashMap<>();
 
 }

@@ -1,13 +1,15 @@
 package com.gsanches.wiki.domain.dtos;
 
-import com.gsanches.wiki.domain.enums.Element;
-import com.gsanches.wiki.domain.enums.MonsterType;
-import com.gsanches.wiki.domain.enums.Size;
+import com.gsanches.wiki.domain.entities.Skill;
+import com.gsanches.wiki.domain.enums.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -15,15 +17,53 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 public class MonsterDto {
-    private UUID id;
+    private UUID id; //not sure if is necessary on the Dto
 
     private String name;
-    private MonsterType type;
-    private Integer lvl;
+
+    private Integer level;
+
+    private Integer healthPoints;
+    private Integer spiritualPoints;
+
+    private Integer defense;
+    private Integer magicDefense;
+
+    private Integer dodge;
 
     private Element element;
+
+    //Offensive
+    private Integer physicalAttack;
+    private Integer magicalAttack;
+
+    private Integer attackSpeed;
+
+    private Integer precision;
+    private Integer critical;
+
+    private Element attackElement;
+
     private Size size;
-    private Integer hp;
-    private Double movementSpeed;
+
+    private MoodType moodType;
+    private MonsterType type;
+
+    private List<Skill> skills = new ArrayList<>();
+
+    //Others
+    private Float movementSpeed;
+    private Completion completion;
+
+    private HashMap<UUID, Float> dropIdAndChances = new HashMap<>();
+
+
+    //Basic attributes
+    private Integer basicStrength;
+    private Integer basicAgility;
+    private Integer basicIntelligence;
+
+    private Integer basicDexterity;
+    private Integer basicLucky;
 
 }

@@ -15,7 +15,7 @@ public class ErrorController {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiErrorResponseDto> handleException(Exception ex) {
-        log.error("Cauth exception", ex);
+        log.error("Caught exception", ex);
 
         ApiErrorResponseDto error = ApiErrorResponseDto.builder()
                 .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
@@ -23,6 +23,8 @@ public class ErrorController {
                 .build();
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+
 
 
 }

@@ -1,6 +1,8 @@
 package com.gsanches.wiki.domain.dtos;
 
 import com.gsanches.wiki.domain.enums.SkillType;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

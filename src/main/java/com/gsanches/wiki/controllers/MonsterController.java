@@ -2,6 +2,7 @@ package com.gsanches.wiki.controllers;
 
 import com.gsanches.wiki.domain.dtos.MonsterDto;
 import com.gsanches.wiki.domain.entities.Monster;
+import com.gsanches.wiki.mappers.MonsterMapper;
 import com.gsanches.wiki.services.MonsterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,14 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class MonsterController {
 
     private final MonsterService monsterService;
+    private final MonsterMapper monsterMapper;
 
-    public ResponseEntity<Monster> createMonster(@RequestBody MonsterDto monsterDto) {
+    public ResponseEntity<MonsterDto> createMonster(@RequestBody MonsterDto monsterDto) {
         //Remember to adjust the MonsterService, and there make throw there
         //Also remember of making the validations! (add here, and on the DTOs
 
         Monster newMonster = monsterService.createMonster(monsterDto);
+        MonsterDto newMonsterDto = monsterMapper.toDto(newMonster);
 
-        return ResponseEntity.ok(newMonster);
+        return ResponseEntity.ok(newMonsterDto);
 
     }
 

@@ -1,5 +1,6 @@
 package com.gsanches.wiki.domain.entities;
 
+import com.gsanches.wiki.domain.enums.MapType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,7 +21,11 @@ public class Map {
 
     private String name;
 
+    private MapType type;
+
     //Location
+    private Integer locationX;
+    private Integer locationY;
 
     //...
 
