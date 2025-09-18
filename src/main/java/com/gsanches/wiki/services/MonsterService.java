@@ -11,9 +11,14 @@ public interface MonsterService {
 
     Monster createMonster(MonsterDto monsterDto);
 
-//    Monster getMonsterById(UUID id);
+    List<Monster> getAllMonsters();
+    Monster getMonsterById(UUID id);
 //    List<Monster> getMonstersByName(String name);
 //    List<Monster> getMonsterByElement(Element element);
+
+    Monster updateMonster(UUID id, MonsterDto monsterDto);
+
+    void deleteMonster(UUID id);
 
 
 
