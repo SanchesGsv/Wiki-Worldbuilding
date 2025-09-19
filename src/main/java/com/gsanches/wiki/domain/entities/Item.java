@@ -30,6 +30,6 @@ public class Item {
 
     // TODO: Continue the many to many
 //    @ManyToMany(mappedBy = drops_id_and_chances)
-    private HashMap<UUID, Float> dropIdAndChances = new HashMap<>();
+//    private HashMap<UUID, Float> dropIdAndChances = new HashMap<>();
 
 }

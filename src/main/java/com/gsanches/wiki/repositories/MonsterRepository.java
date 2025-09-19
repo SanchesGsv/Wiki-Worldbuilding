@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Repository
 public interface MonsterRepository extends JpaRepository<Monster, UUID> {
-//    List<Monster> findAllByName(String name);
+    List<Monster> findAllByName(String name);
 //    List<Monster> findAllBySize(Size size);
 //    List<Monster> findAllByElement(Element element);
 

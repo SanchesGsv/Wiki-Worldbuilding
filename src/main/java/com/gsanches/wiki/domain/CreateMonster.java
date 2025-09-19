@@ -1,25 +1,25 @@
-package com.gsanches.wiki.domain.entities;
+package com.gsanches.wiki.domain;
 
-import com.gsanches.wiki.domain.enums.Element;
-import com.gsanches.wiki.domain.enums.MonsterType;
-import com.gsanches.wiki.domain.enums.MoodType;
-import com.gsanches.wiki.domain.enums.Size;
+import com.gsanches.wiki.domain.entities.Skill;
+import com.gsanches.wiki.domain.enums.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
-// TODO: see the components here
-public class BasicAttributes {
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class CreateMonster {
 
-    // TODO: See if all of this information should be here, or change this to the Monster entity
-
-    private UUID id; //Check if this is necessary!
+    private String name;
 
     private Integer level;
 
-    //Defensive
     private Integer healthPoints;
     private Integer spiritualPoints;
 
@@ -43,27 +43,23 @@ public class BasicAttributes {
 
     private Size size;
 
-    private MoodType moodType; //Aggressive
-    private MonsterType type; //normal, boss Change here and
+    private MoodType moodType;
+    private MonsterType type;
 
     private List<Skill> skills = new ArrayList<>();
 
-
     //Others
     private Float movementSpeed;
-    private Integer weightCapacity;
+    private Completion completion;
 
+    private HashMap<UUID, Float> dropIdAndChances = new HashMap<>();
 
 
     //Basic attributes
-    //maybe here put the basic attribute like strength, agility, ...!
     private Integer basicStrength;
     private Integer basicAgility;
     private Integer basicIntelligence;
 
     private Integer basicDexterity;
     private Integer basicLucky;
-
-
-
 }

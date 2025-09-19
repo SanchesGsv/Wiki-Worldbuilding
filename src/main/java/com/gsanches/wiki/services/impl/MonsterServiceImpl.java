@@ -1,5 +1,6 @@
 package com.gsanches.wiki.services.impl;
 
+import com.gsanches.wiki.domain.CreateMonster;
 import com.gsanches.wiki.domain.dtos.MonsterDto;
 import com.gsanches.wiki.domain.entities.Monster;
 import com.gsanches.wiki.repositories.MonsterRepository;
@@ -21,7 +22,7 @@ public class MonsterServiceImpl implements MonsterService {
     private final MonsterRepository monsterRepository;
 
     @Override
-    public Monster createMonster(MonsterDto monsterDto) {
+    public Monster createMonster(CreateMonster monsterDto) {
         //Remember of throw an exception if this fail!
 
         Monster newMonster = new Monster();
@@ -39,6 +40,11 @@ public class MonsterServiceImpl implements MonsterService {
     public Monster getMonsterById(UUID id) {
         return monsterRepository.findById(id)
                 .orElseThrow(EntityNotFoundException::new);
+    }
+
+    @Override
+    public List<Monster> getMonstersByName(String name) {
+        return monsterRepository.findAllByName(name);
     }
 
     @Override

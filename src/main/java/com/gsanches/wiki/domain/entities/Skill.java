@@ -28,10 +28,11 @@ public class Skill {
 
     private SkillType type;
 
-    private List<Monster> ownedBy;
+//    @ManyToMany
+//    private List<Monster> ownedBy;
 
 
-    private List<String> formulas;
+//    private List<String> formulas;
     //eg: magicalAttack = (magicAttack * 10) + (skillLvl * 2)
     //See how should be others things (such as the thing that doesn't is on the formula, for example dex, physicalAttack)
 

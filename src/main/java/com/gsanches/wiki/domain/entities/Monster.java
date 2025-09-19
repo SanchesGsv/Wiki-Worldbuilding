@@ -58,7 +58,7 @@ public class Monster {
     private MoodType moodType; //Aggressive
     private MonsterType type; //normal, boss Change here and
 
-    private List<Skill> skills = new ArrayList<>();
+//    private List<Skill> skills = new ArrayList<>();
 
 
     //Others

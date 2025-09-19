@@ -16,8 +16,12 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+
+//Do another class, like a Dto, but making only the data related to the creation of a monster! (use the minimum)
+
 public class MonsterDto {
-    private UUID id; //not sure if is necessary on the Dto
+
+    private UUID id;
 
     private String name;
 
